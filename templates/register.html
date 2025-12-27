@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleRegister.css') }}">
+</head>
+<body>
+    <div id="register-container">
+        <h1>Créer un compte</h1>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Pseudo" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+            <button type="submit">Créer un compte</button>
+        </form>
+        <a href="{{ url_for('login') }}">Déjà un compte ? Connexion</a>
+    </div>
+</body>
+</html>

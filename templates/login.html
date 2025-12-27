@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login !</title>
+         <link rel="stylesheet" href="{{ url_for('static', filename='styleLogin.css') }}">
+    </head>
+
+<body>
+    <div id="login-container">
+        <h1>Connexion !</h1>
+        <form action="{{ url_for('login') }}" method="post">
+            <label for="username">Nom d'utilisateur</label>
+            <input id="username" type="text" name="username">
+
+            <label for="password">Mot de passe</label>
+            <input id="password" type="password" name="password">
+
+            <button type="submit">Valider</button>
+        </form>
+        <a href="{{ url_for('register') }}">S'inscrire</a>
+    </div>
+</body>
+</html>

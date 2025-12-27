@@ -1,0 +1,157 @@
+/* =========================
+   Conteneur principal centré
+========================= */
+.container {
+    max-width: 1200px;   /* largeur maximale */
+    margin: 0 auto;       /* centre horizontalement */
+    padding: 0 20px;      /* marges internes gauche et droite */
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column; /* empile les éléments verticalement */
+    gap: 20px;
+}
+
+/* Responsive padding */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* =========================
+   Partie haute (header)
+========================= */
+#header {
+    display: flex;
+    justify-content: space-between; /* titre à gauche, lien à droite */
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd;
+    background-color: #f5f5f5;
+    flex-wrap: wrap; /* pour mobile */
+    gap: 10px;
+}
+
+/* Titre du site */
+#header h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #4a148c; /* violet foncé */
+    margin: 0;
+}
+
+/* Lien déconnexion */
+#header a {
+    text-decoration: none;
+    background-color: #ff5252; /* rouge vif */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#header a:hover {
+    background-color: #e04848; /* hover plus foncé */
+    transform: translateY(-2px);
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+    #header h1 {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+    #header a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =========================
+   Conteneur du formulaire
+========================= */
+#form-container {
+    background-color: #f9f9f9; /* fond clair */
+    border: 2px solid #ddd;     /* bordure douce */
+    border-radius: 10px;        /* coins arrondis */
+    padding: 20px;
+    max-width: 600px;           /* limite la largeur */
+    margin: 20px auto;          /* centre horizontalement */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ombre subtile */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Effet hover sur le formulaire */
+#form-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Textearea */
+#form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 80px;
+    margin-bottom: 10px;
+}
+
+/* Bouton de validation */
+#form-container button[type="submit"] {
+    background-color: #4a148c; /* violet foncé */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#form-container button[type="submit"]:hover {
+    background-color: #6a1b9a; /* hover violet plus clair */
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Texte et responsive font-size
+========================= */
+h1 {
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+@media (min-width: 600px) {
+    body { font-size: 18px; }
+}
+
+@media (min-width: 1024px) {
+    body { font-size: 20px; }
+}
+
+/* Images et vidéos responsive */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================
+   Forum
+========================= */
+#forum {
+    background-color: chocolate;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+

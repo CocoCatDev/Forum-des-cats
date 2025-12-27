@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Forum de Cat !</title>
+    </head>
+    <div id="header">
+    <h1>Forum de Cat !</h1>
+    <a href="{{ url_for('logout') }}">Déconnexion</a>
+</div>
+
+    <div id="form-container">
+    <form method="post" action="{{ url_for('forum') }}">
+        <textarea name="message" placeholder="Entre ton message"></textarea>
+        <button type="submit">Valider</button>
+    </form>
+</div>
+
+
+
+
+        <div id="forum">
+            <ul>
+                {% for message in messages %}
+                <li>
+                    <strong>{{ message.username }}</strong> : {{ message.content }}
+                    <small>{{ message.created_at }}</small>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
